@@ -1,0 +1,282 @@
+<div class="section-title">
+			    <span>Equipe Principal</span>
+			    <h2>
+			        Conheça os Integrantes
+			        da Team Galaxy
+			    </h2>
+			</div>
+		<section class="teams" id="equipes">
+				<div class="team-card josh">
+
+					<img src="assets/josh.png" alt="Josh Kirkpatrick">
+					<div class="team-info">
+						<span class="role">Piloto</span>
+						<h2>Josh</h2>
+						<p>Piloto rebelde e metre da improvisação em situações de risco.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card yoko">
+					<img src="assets/yoko.png" alt="Yoko">
+					<div class="team-info">
+						<span class="role">Piloto/Pop Star</span>
+						<h2>Yoko</h2>
+						<p>Aspirante a estrela pop que transforma qualquer missão em espetáculo.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card brett">
+					<img src="assets/brett.png" alt="Brett">
+					<div class="team-info">
+						<span class="role">Estratégia/Tecnologia</span>
+						<h2>Brett</h2>
+						<p>Gênio estratégico que leva cada missão com máxima seriedade.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card fluffy">
+					<img src="assets/fluffy.png" alt="Fluffy">
+					<div class="team-info">
+						<span class="role"> UltraPet/Tecnologia</span>
+						<h2>Fluffy</h2>
+						<p>Ele atua como um companheiro de equipe, ajudante de missões e animal de estimação.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card bobby">
+					<img src="assets/bobby.png" alt="Bobby">
+					<div class="team-info">
+						<span class="role">Guarda Florestal/Piloto</span>
+						<h2>Bobby</h2>
+						<p>Embora tente parecer tranquilo e confiante, Bobby, em alguns momentos da série, demonstra medo e incapacidade de lidar com situações de pressão.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card toby">
+					<img src="assets/toby.png" alt="Toby">
+					<div class="team-info">
+						<span class="role">Guarda Florestal/Piloto</span>
+						<h2>Toby</h2>
+						<p>Sempre querendo provar que é a aluna mais durona do campus. Ela sempre precisa ser o centro das atenções – o que irrita Yoko.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card kimball">
+					<img src="assets/kimball.png" alt="kimball">
+					<div class="team-info">
+						<span class="role">Guarda Florestal/Piloto</span>
+						<h2>Kimball</h2>
+						<p>Kimball é uma princesa. Apesar de ser geralmente amigável, sua criação privilegiada a tornou um pouco ingênua e ela frequentemente ignora os outros alunos.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card spike">
+					<img src="assets/spike.png" alt="Spike">
+					<div class="team-info">
+						<span class="role"> UltraPet/Tecnologia</span>
+						<h2>Spike</h2>
+						<p>Ele atua como um companheiro de equipe, ajudante de missões e animal de estimação.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card spavid">
+					<img src="assets/spavid.png" alt="Spavid">
+					<div class="team-info">
+						<span class="role">Piloto</span>
+						<h2>Spavid</h2>
+						<p>Spavid é um dos poucos alunos alienígenas da Galaxy High. Ele é bem-visto por todos, apesar de sua desajeitada jeito de ser. Depois de se tornar adulto, ele desenvolveu poderes sobre-humanos e reflexos aprimorados, mas optou por suprimi-los depois que eles subiram à cabeça.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card ryan">
+					<img src="assets/ryan.png" alt="Ryan">
+					<div class="team-info">
+						<span class="role">Piloto</span>
+						<h2>Ryan</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsa ducimus iste facere, dignissimos tempora, odio expedita? Praesentium ipsa provident temporibus, veniam, eius, delectus vel, dolore quis obcaecati dignissimos labore.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card ryan">
+					<img src="assets/ryan.png" alt="Ryan">
+					<div class="team-info">
+						<span class="role">Piloto</span>
+						<h2>Ryan</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat ipsa ducimus iste facere, dignissimos tempora, odio expedita? Praesentium ipsa provident temporibus, veniam, eius, delectus vel, dolore quis obcaecati dignissimos labore.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+				<div class="team-card spike">
+					<img src="assets/spike.png" alt="Spike">
+					<div class="team-info">
+						<span class="role">UltraPet/Tecnologia</span>
+						<h2>Spike</h2>
+						<p>Ele atua como um companheiro de equipe, ajudante de missões e animal de estimação.</p>
+                <a href="#" class="team-btn">Ver Perfil</a>
+					</div><!--team-info-->
+				</div>
+		</section>
+
+
+.teams{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 80px 5%;
+	background: #050816;
+	gap: 20px;
+}
+
+/*=== Cards das equipes ===*/
+.team-card{
+	position: relative;
+	width: 100%;
+	max-width: 280px;
+    padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: .4s;
+    border: 1px solid rgba(255,255,255,.1);
+    text-align: center;
+}
+.team-card:hover{
+	transform: translateY(-10px) scale(1.02);
+}
+.team-card::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+    linear-gradient(
+        130deg,
+        transparent,
+        rgba(41,121,255,.15),
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: .7s;
+    pointer-events: none;
+}
+/*===IMAGE===*/
+.team-card img{
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, .7));
+    transition: .4s;
+}
+.team-card img:hover{
+	transform: scale(1.08);
+}
+/* INFO */
+
+.team-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+}
+
+.team-info p{
+	flex: 1;
+	text-align: justify;
+	line-height: 1.7;
+}
+
+.role{
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+ 	background: #F9A825;
+    color: #111;
+}
+
+.team-info h2{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+    font-family: var(--fnt-title);
+}
+
+.team-info p{
+    color: #d4d4d4;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* BOTÃO */
+
+.team-btn{
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    background: rgba(0,0,0,.35);
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.team-btn:hover{
+    background: rgba(255,255,255,.15);
+}
+
+/* CORES INDIVIDUAIS */
+
+.josh{
+    background:
+    linear-gradient(
+        180deg,
+        #13293D,
+        #1B4965
+    );
+
+    box-shadow:
+    0 0 25px rgba(41,121,255,.2);
+}
+
+.yoko{
+    background:
+    linear-gradient(
+        180deg,
+        #4A148C,
+        #880E4F
+    );
+
+    box-shadow:
+    0 0 25px rgba(255,0,180,.2);
+}
+
+.brett{
+    background:
+    linear-gradient(
+        180deg,
+        #3B0A0A,
+        #C62828
+    );
+
+    box-shadow:
+    0 0 30px rgba(255,0,0,.3);
+}
+.fluffy{
+    background:
+    linear-gradient(
+        180deg,
+        #1B1B1B,
+        #5A0000
+    );
+
+    box-shadow:
+    0 0 25px rgba(255,50,50,.2);
+}
+.fluffy img{
+	width: 200px;
+	height: 200px;
+	object-fit: contain;
+}

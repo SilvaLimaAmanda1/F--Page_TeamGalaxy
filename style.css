@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+::-webkit-scrollbar{
+	width: 9px;
+}
+::-webkit-scrollbar-track{
+	background-color: var(--branco);
+	border-radius: 12px;
+}
+::-webkit-scrollbar-thumb{
+	background-image: linear-gradient(45deg,  #D81B60, #E53935, #F9A825);
+	border-radius: 12px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-image: linear-gradient(35deg, #F9A825 , #E53935, #D81B60);
+}
+:root{
+	--magenta: #D81B60;
+	--roxo: #C2185B;
+	--amarelo: #F9A825;
+	--vermelho: #E53935;
+	--branco: #FFFFFF;
+	--cinza: #B0BEC5;
+	--azul-esc: #283593;
+	--azul-esp: #0D1B2A;
+
+	--fnt-body: "Merriweather Sans", sans-serif;
+	--fnt-title:  "Bangers", system-ui;
+}
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: var(--fnt-body);
+}
+
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+body{
+	min-height: 100vh;
+	background: var(--azul-esp);
+	overflow-x: hidden;
+}
+#stars{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    transition: transform .3s ease;
+    animation: twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{
+        opacity: .3;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* HEADER */
+header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	padding: 0 4%;
+	background: rgba(13, 27, 42, 0.9);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+	z-index: 100;
+}
+
+/* LOGO */
+.logo img{
+	width: 90px;
+}
+
+/* NAV */
+.navigation{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+/* MENU */
+.navigation ul{
+	display: flex;
+	z-index: 100;
+	gap: 40px;
+}
+
+/* LINKS */
+.navigation a{
+	position: relative;
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--branco);
+	transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+.navigation a::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0%;
+	height: 2px;
+	background: linear-gradient(90deg, var(--magenta), var(--amarelo));
+	transition: 0.3s;
+}
+
+/* HOVER */
+.navigation a:hover{
+	color: var(--amarelo);
+	text-shadow: 0 0 8px var(--amarelo);
+}
+
+.navigation a:hover::after{
+	width: 100%;
+	box-shadow: 0 0 10px var(--amarelo);
+}
+
+/* LINK ATIVO */
+.navigation a.active{
+	color: var(--magenta);
+	text-shadow: 0 0 10px var(--magenta);
+}
+
+.navigation a.active::after{
+	width: 100%;
+	background: var(--magenta);
+	box-shadow: 0 0 10px var(--magenta);
+}
+/* BOTÃO HAMBURGUER */
+.nav-toggle{
+	display: none;
+	gap: 5px;
+	z-index: 200;
+	position: relative;
+	cursor: pointer;
+	flex-direction: column;
+}
+
+.nav-toggle span{
+	width: 25px;
+	height: 3px;
+	background: var(--branco);
+	transition: 0.3s;
+	border-radius: 5px;
+}
+
+/* ANIMAÇÃO (vira X) */
+.nav-toggle.active span:nth-child(1){
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2){
+	opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3){
+	transform: rotate(-45deg) translate(6px, -6px);
+}
+/* === Main & Sections ===*/
+main{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+section{
+	width: 100%;
+	padding: 80px 8%;
+}
+.section-title{
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 50px;
+}
+
+.section-title span{
+    color: var(--magenta);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-title h2{
+    color: white;
+    font-size: 3rem;
+    margin-top: 10px;
+    font-family: var(--fnt-title);
+    line-height: 1.2;
+}
+.hero{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	align-items: center;
+	gap: 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	min-height: calc(100vh - 100px);
+	padding: 80px 8%;
+}
+
+.hero-text{
+	max-width: 550px;
+	margin-bottom: 50px;
+}
+
+.hero-text h1{
+	font-size: 4rem;
+	color: var(--amarelo);
+	font-family: var(--fnt-title); 
+	line-height: 1;
+	margin: 20px 0;
+}
+
+.hero-text span{
+	font-size: 1.1rem;
+	font-style: italic;
+	color: var(--amarelo);
+	background-color: rgba( 194, 24, 91, 0.5);
+	border-radius: 20px;
+	padding: 0.5rem 1rem;
+}
+
+.hero-text p{
+	font-size: 1.125rem;
+	text-indent: 5%;/*Recuo ao iniciar um paragrafo*/
+	font-weight: normal;
+	text-align: justify;
+	margin: 20px 0;
+	color: var(--cinza);
+	line-height: 1.5;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Necessário para posicionar a base */
+    /* Cria um ambiente 3D para a base deitar */
+    perspective: 1000px; 
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 387px;
+    height: auto; /* Ajustado para manter a proporção correta da imagem */
+    display: block;
+    position: relative;
+    z-index: 2; /* Fica acima do holograma */
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+/* A Base do Holograma */
+.hero-image::after {
+    content: "";
+    position: absolute;
+    bottom: -98px; /* Ajuste dependendo de onde termina o pé dos personagens */
+    left: 50%;
+    transform: translateX(-50%) rotateX(75deg); /* Deita o círculo em perspectiva */
+    width: 390px;
+    height: 390px;
+    background: radial-gradient(circle, rgba(216, 27, 96, 0.6) 0%, rgba(249, 168, 37, 0.2) 40%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+    
+    /* Brilho neon nas bordas da projeção */
+    border: 4px solid var(--magenta);
+    box-shadow: 0 0 30px var(--magenta), inset 0 0 20px var(--amarelo);
+    
+    /* Animação para acompanhar o ritmo da flutuação */
+    animation: pulse-hologram 4s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Animações */
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Subi um pouquinho mais para dar espaço ao efeito */
+    }
+}
+
+@keyframes pulse-hologram {
+    0%, 100% {
+        transform: translateX(-50%) rotateX(75deg) scale(1);
+        opacity: 0.8;
+        box-shadow: 0 0 30px var(--magenta), inset 0 0 20px var(--amarelo);
+    }
+    50% {
+        /* Quando os personagens sobem, a base expande levemente e enfraquece o brilho */
+        transform: translateX(-50%) rotateX(75deg) scale(1.1);
+        opacity: 0.5;
+        box-shadow: 0 0 45px var(--magenta), inset 0 0 30px var(--amarelo);
+    }
+}
+.btn-cta{
+	padding: 12px 25px;
+	background: var(--magenta);
+	color: var(--branco);
+	font-weight: 600;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: .3s;
+
+}
+.btn-cta:hover{
+	background: var(--roxo);
+	box-shadow: 0 0 15px var(--magenta);
+}
+/*Efeito*/
+.space-wave {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    background: var(--azul-esp); /* Cor de fundo padrão do site */
+}
+
+.space-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px; /* Altura da onda */
+    transform: rotate(180deg); /* Faz a onda apontar para baixo */
+}
+
+/* A cor abaixo deve ser EXATAMENTE a cor de fundo da seção de BAIXO */
+.space-wave .shape-fill {
+    fill: #16273a; 
+}
+/*=== Section equipes ===*/
+.squads{
+    padding: 120px 8%;
+}
+.squads-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+/* CARD */
+
+.squad-card{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border-radius: 25px;
+    transition: .4s;
+   clip-path: polygon(
+        0 20px,
+        20px 0,
+        calc(100% - 20px) 0,
+        100% 20px,
+        100% calc(100% - 20px),
+        calc(100% - 20px) 100%,
+        20px 100%,
+        0 calc(100% - 20px)
+    );
+}
+
+.squad-card:hover{
+    transform: translateY(-10px);
+}
+
+/* CORES */
+
+.team-one{
+    border: 2px solid #00A8FF;
+    box-shadow: 0 0 25px rgba(0,168,255,.25);
+}
+
+.team-two{
+    border: 2px solid #A855F7;
+    box-shadow: 0 0 25px rgba(168,85,247,.25);
+}
+
+.team-three{
+    border: 2px solid #00E5C3;
+    box-shadow: 0 0 25px rgba(0,229,195,.25);
+}
+
+/* BADGE */
+
+.team-badge{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(0,0,0,.65);
+    color: white;
+    font-weight: bold;
+
+    z-index: 10;
+}
+
+/* IMAGEM */
+
+.squad-image{
+    height: 280px;
+}
+
+.squad-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CONTEÚDO */
+
+.squad-content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 25px;
+}
+
+.squad-content h3{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: var(--fnt-title);
+    margin-bottom: 25px;
+}
+
+/* MEMBROS */
+
+.member{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.member span{
+    color: white;
+    font-weight: 700;
+}
+
+.member small{
+    color: var(--cinza);
+}
+
+/* DESCRIÇÃO */
+
+.team-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.team-info p{
+    flex: 1;
+    color: var(--cinza);
+    text-align: center;
+    line-height: 1.8;
+    margin: 25px 0;
+}
+
+/* BOTÃO */
+
+.team-btn{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    margin-top: auto;
+    transition: .3s;
+    clip-path: polygon(
+        15px 0,
+        100% 0,
+        calc(100% - 15px) 100%,
+        0 100%
+    );
+}
+
+.team-one .team-btn{
+    background: #0077FF;
+}
+
+.team-two .team-btn{
+    background: #8B3DFF;
+}
+
+.team-three .team-btn{
+    background: #00C7A8;
+}
+
+.team-btn:hover{
+    transform: scale(1.03);
+}
+
+
+/*stats*/
+.divider-laser {
+    position: relative;
+}
+
+.divider-laser::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--magenta), var(--amarelo), transparent);
+    box-shadow: 0 0 12px var(--magenta), 0 0 4px var(--amarelo);
+}
+.stats{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	padding: 80px 8%;
+}
+.stat-box{
+	width: 220px;
+	padding: 30px;
+	text-align: center;
+	border-radius: 20px;
+	background: linear-gradient(180deg, #16273a, #0D1B2A);
+}
+.stat-box h3{
+	font-size: 3rem;
+	font-weight: 500;
+	color: var(--branco);
+	font-family: var(--fnt-title);
+}
+.stat-box p{
+	color: var(--branco);
+}
+/*Section Hangar*/
+.hangar {
+    padding: 100px 8%;
+    background: rgba(22, 39, 58, 0.4); /* Fundo sutil para quebrar o ritmo */
+}
+
+.hangar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ship-card {
+    background: #16273a;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s;
+}
+
+.ship-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--amarelo);
+    box-shadow: 0 0 20px rgba(249, 168, 37, 0.15);
+}
+
+.ship-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #000; /* Ajuda a camuflar o fundo branco da Vespa */
+}
+
+.ship-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ship-info {
+    padding: 25px;
+}
+
+.ship-info h3 {
+    font-family: var(--fnt-title);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--branco);
+    margin-bottom: 10px;
+}
+
+.ship-info p {
+    color: var(--cinza);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/*Section Escola*/
+.escola{
+	padding: 100px 8%;
+}
+
+.escola-content{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	gap: 60px;
+	align-items: center;
+}
+
+.escola-image{
+	width: 100%;
+	overflow: hidden;
+}
+
+.escola-image img{
+	width: 100%;
+	display: block;
+	border-radius: 20px;
+}
+
+.escola-texto p{
+	color: var(--cinza);
+	line-height: 1.8;
+	text-align: justify;
+}
+/*Contato*/
+.contato{
+	padding: 100px 8%;
+}
+
+.contato form{
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.input-box{
+	position: relative;
+	width: 100%;
+}
+.input-box i{
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    color: var(--amarelo);
+    font-size: 1.2rem;
+}
+.input-box input,
+.input-box textarea{
+	width: 100%;
+	display: block;
+
+	padding: 15px 15px 15px 45px;
+
+	background: #16273a;
+	color: white;
+
+	border-radius: 12px;
+	border: 1px solid rgba(255,255,255,.15);
+}
+
+.contato button{
+	background: var(--magenta);
+	color: var(--branco);
+	padding: 15px;
+	border-radius: 10px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .3s;
+}
+.contato button:hover{
+	background: var(--roxo);
+}
+
+footer{
+	position: relative;
+	text-align: center;
+	padding: 30px 20px;
+	font-size: .85rem;
+	line-height: 1.7;
+	color: var(--cinza);
+}
+
+footer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--roxo),
+        var(--branco),
+        
+        transparent
+    );
+
+    box-shadow:
+        0 0 10px var(--magenta),
+        0 0 20px var(--amarelo);
+}
+
+
+/* MOBILE */
+/* RESPONSIVO */
+
+@media (max-width: 1100px){
+
+    .squads-grid{
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .squad-image{
+        height: 240px;
+    }
+}
+@media (max-width: 768px){
+
+	header{
+		height: 80px;
+	}
+
+	.logo img{
+		width: 70px;
+	}
+
+	.nav-toggle{
+		display: flex;
+	}
+
+	.navigation ul{
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		width: 100%;
+		height: calc(100vh - 80px);
+		background: rgba(13,27,42,.97);
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 40px;
+		transition: .4s;
+	}
+
+	.navigation ul.active{
+		left: 0;
+	}
+
+	.hero{
+		grid-template-columns: 1fr;
+		text-align: center;
+		min-height: auto;
+		padding: 60px 5%;
+	}
+
+	.hero-text{
+		max-width: 100%;
+	}
+
+	.hero-text h1{
+		font-size: 2.5rem;
+	}
+
+	.hero-text p{
+		text-align: justify;
+		text-indent: 0;
+	}
+
+	.hero-image img{
+		max-width: 280px;
+	}
+
+	.section-title h2{
+		font-size: 2rem;
+	}
+
+    .hangar-grid {
+        grid-template-columns: 1fr;
+    }
+    
+	.escola-content{
+		grid-template-columns: 1fr;
+	}
+
+	.stat-box{
+		width: 150px;
+	}
+
+	footer{
+		font-size: .75rem;
+		padding: 20px;
+	}
+}
